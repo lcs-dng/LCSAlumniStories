@@ -21,7 +21,11 @@ struct LandingView: View {
                 
                 List(stories) { story in
                     
-                    StoryView(currentStory: story)
+                    NavigationLink {
+                        StoryDetailView(currentStoryDetail: story)
+                    } label: {
+                        StoryView(currentStory: story)
+                    }
                     
                 }
                 
